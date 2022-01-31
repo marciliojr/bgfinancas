@@ -168,6 +168,8 @@ public final class PrincipalControlador implements Initializable {
     private Button botaoCalculadora;
     @FXML
     private Button botaoGuia;
+    @FXML
+    private Button botaoAcoes;
 
     @FXML
     private Button botaoAjuda;
@@ -228,6 +230,7 @@ public final class PrincipalControlador implements Initializable {
         botaoAjuda.setTooltip(new Tooltip(idioma.getMensagem("ajuda")));
         botaoAjudaProximo.setTooltip(new Tooltip(idioma.getMensagem("proximo")));
         botaoAjudaAnterior.setTooltip(new Tooltip(idioma.getMensagem("anterior")));
+        botaoAcoes.setTooltip(new Tooltip(idioma.getMensagem("acoes")));
     }
 
     public void acaoGuia() {
@@ -405,6 +408,10 @@ public final class PrincipalControlador implements Initializable {
         } catch (IOException ex) {
             Janela.showException(ex);
         }
+    }
+
+    public void acaoAcoesBovespa(){
+        System.out.println("Chamou");
     }
 
     @Override
